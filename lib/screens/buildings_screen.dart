@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constants/text_stayls.dart';
 import '../models/buildings_model.dart';
 import '../services/buildings_service.dart';
 import '../widgets/custom_container_widget.dart';
@@ -25,17 +26,7 @@ class _BuildingscreensState extends State<Buildingscreens> {
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(children: [
-            Row(
-              children: const [
-                Text("Baki şəhəri",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    )),
-                SizedBox(),
-              ],
-            ),
+            Text("Baki şəhəri", style: cityNameTextStyle),
             const Divider(
               height: 1,
               color: Colors.white10,
