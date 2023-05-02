@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../model/buildings_model.dart';
+import '../models/buildings_model.dart';
 import '../services/buildings_service.dart';
 import '../widgets/custom_container_widget.dart';
 import '../widgets/custom_eleveten_button_widgets.dart';

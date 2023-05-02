@@ -4,12 +4,12 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 
 import '../constants/api_constants.dart';
-import '../model/buildings_model.dart';
+import '../models/buildings_model.dart';
 import '../screens/buildings_screen.dart';
 
 Future<List<BuildingsModel>> getBuildingsData() async {
   try {
-    final url = '$BASE_URL/buildings';
+    final url = buildings_url;
     final response = await http.get(Uri.parse(url));
     var data = jsonDecode(utf8.decode(response.bodyBytes));
     for (Map i in data) {
@@ -21,9 +21,7 @@ Future<List<BuildingsModel>> getBuildingsData() async {
     return buildingsdataList;
   } catch (e) {
     if (e is SocketException) {
-      print("Socket exception");
-    } else {
-      print("Unhandled exception: ${e.toString()}");
+      null;
     }
   }
   return buildingsdataList;

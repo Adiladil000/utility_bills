@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants/text_stayls.dart';
-import '../model/buildings_for_id_model.dart';
+import '../models/buildings_for_id_model.dart';
 import '../services/first_building_service.dart';
 import '../widgets/custom_container_widget.dart';
 import '../widgets/my_app_bar_widgets.dart';
@@ -74,9 +74,9 @@ class _FirstBuildingScreenState extends State<FirstBuildingScreen> {
     var route = MaterialPageRoute(
       builder: (context) => DebtNoticeScreen(
           name: firstBuildingDataList[index].ownerHouseName,
-          water: "${firstBuildingDataList[index].waterDebt}",
-          light: "${firstBuildingDataList[index].lightDebt}",
-          gas: "${firstBuildingDataList[index].gasDebt}"),
+          water: firstBuildingDataList[index].waterDebt,
+          light: firstBuildingDataList[index].lightDebt,
+          gas: firstBuildingDataList[index].gasDebt),
     );
     Navigator.push(context, route);
   }

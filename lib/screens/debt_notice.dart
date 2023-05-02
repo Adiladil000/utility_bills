@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
+import '../constants/icon_manager.dart';
 import '../constants/text_stayls.dart';
-import '../services/asset_manager.dart';
 import '../widgets/custom_container_widget.dart';
 import '../widgets/my_app_bar_widgets.dart';
 
 class DebtNoticeScreen extends StatefulWidget {
   DebtNoticeScreen({super.key, required this.gas, required this.name, required this.light, required this.water});
   String name;
-  String gas;
-  String light;
-  String water;
+  int gas;
+  int light;
+  int water;
   @override
   State<DebtNoticeScreen> createState() => _DebtNoticeScreenState();
 }
@@ -46,7 +46,7 @@ class _DebtNoticeScreenState extends State<DebtNoticeScreen> {
     return ListTile(
       leading: CircleAvatar(
         radius: 25,
-        backgroundImage: AssetImage(AssetsManager.azerQaz),
+        backgroundImage: AssetImage(IconManager.azerQazIcon),
       ),
       title: Text(
         "AzeriQaz",
@@ -59,7 +59,7 @@ class _DebtNoticeScreenState extends State<DebtNoticeScreen> {
             "$amountText ${widget.gas}" " ",
             style: subTitleTextStyle,
           ),
-          Image.asset(color: Colors.white, cacheWidth: 15, cacheHeight: 15, AssetsManager.manat)
+          Image.asset(color: Colors.white, cacheWidth: 15, cacheHeight: 15, IconManager.manatIcon)
         ],
       ),
     );
@@ -69,7 +69,7 @@ class _DebtNoticeScreenState extends State<DebtNoticeScreen> {
     return ListTile(
       leading: CircleAvatar(
         radius: 25,
-        backgroundImage: AssetImage(AssetsManager.azerSu),
+        backgroundImage: AssetImage(IconManager.azerSuIcon),
       ),
       title: Text(
         "AzerSu",
@@ -82,7 +82,7 @@ class _DebtNoticeScreenState extends State<DebtNoticeScreen> {
             "$amountText  ${widget.water}" " ",
             style: subTitleTextStyle,
           ),
-          Image.asset(color: Colors.white, cacheWidth: 15, cacheHeight: 15, AssetsManager.manat)
+          Image.asset(color: Colors.white, cacheWidth: 15, cacheHeight: 15, IconManager.manatIcon)
         ],
       ),
     );
@@ -92,7 +92,7 @@ class _DebtNoticeScreenState extends State<DebtNoticeScreen> {
     return ListTile(
       leading: CircleAvatar(
         radius: 25,
-        backgroundImage: AssetImage(AssetsManager.azerIsiq),
+        backgroundImage: AssetImage(IconManager.azerIsiqIcon),
       ),
       title: Text(
         "AzerIsiq",
@@ -105,7 +105,7 @@ class _DebtNoticeScreenState extends State<DebtNoticeScreen> {
             "$amountText  ${widget.light}" " ",
             style: subTitleTextStyle,
           ),
-          Image.asset(color: Colors.white, cacheWidth: 15, cacheHeight: 15, AssetsManager.manat)
+          Image.asset(color: Colors.white, cacheWidth: 15, cacheHeight: 15, IconManager.manatIcon)
         ],
       ),
     );
