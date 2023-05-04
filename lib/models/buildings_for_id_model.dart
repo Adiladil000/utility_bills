@@ -3,9 +3,9 @@ class BuildingsForIdModel {
   int buildingId;
   String buildingName;
   String ownerHouseName;
-  int gasDebt;
-  int lightDebt;
-  int waterDebt;
+  double gasDebt;
+  double lightDebt;
+  double waterDebt;
 
   BuildingsForIdModel(
       {required this.id,

@@ -8,9 +8,9 @@ import '../widgets/my_app_bar_widgets.dart';
 class DebtNoticeScreen extends StatefulWidget {
   DebtNoticeScreen({super.key, required this.gas, required this.name, required this.light, required this.water});
   String name;
-  int gas;
-  int light;
-  int water;
+  double gas;
+  double light;
+  double water;
   @override
   State<DebtNoticeScreen> createState() => _DebtNoticeScreenState();
 }
